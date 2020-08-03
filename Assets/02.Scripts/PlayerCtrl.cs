@@ -15,6 +15,9 @@ public class PlayerCtrl : MonoBehaviour
     {
         tr = GetComponent<Transform>(); // tr = GetComponent("Transform") as Transform;
         anim = this.gameObject.GetComponent<Animation>();
+
+        //Switching Idle Animation Clip
+        anim.Play("Idle");
     }
 
     // Update is called once per frame
