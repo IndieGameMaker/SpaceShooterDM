@@ -30,7 +30,7 @@ public class PlayerCtrl : MonoBehaviour
         */
 
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);
-        transform.Translate(dir * 0.1f);
+        transform.Translate(dir.normalized * 0.1f);
 
         // transform.Translate(Vector3.forward * 0.1f * v);
         // transform.Translate(Vector3.right * 0.1f * h);
