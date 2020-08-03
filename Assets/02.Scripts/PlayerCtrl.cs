@@ -7,9 +7,14 @@ public class PlayerCtrl : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float turnSpeed = 50.0f;
 
+    private Transform tr;
+    private Animation anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        tr = GetComponent<Transform>(); // tr = GetComponent("Transform") as Transform;
+        anim = this.gameObject.GetComponent<Animation>();
     }
 
     // Update is called once per frame
