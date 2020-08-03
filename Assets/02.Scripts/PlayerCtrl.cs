@@ -2,11 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class PlayerAnim
+{
+    public AnimationClip idle;
+    public AnimationClip runForward;
+    public AnimationClip runBackward;
+    public AnimationClip runLeft;
+    public AnimationClip runRight;
+}
+
 public class PlayerCtrl : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float turnSpeed = 50.0f;
-
+    public PlayerAnim playerAnim;
     private Transform tr;
     private Animation anim;
 
