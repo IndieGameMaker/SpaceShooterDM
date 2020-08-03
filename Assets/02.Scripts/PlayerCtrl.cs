@@ -17,5 +17,7 @@ public class PlayerCtrl : MonoBehaviour
 
         Debug.Log("h=" + h); //Console View에 문자열을 출력
         Debug.Log($"v={v}"); //Debug.Log("v=" + v);
+
+        transform.position += new Vector3(0, 0, 0.1f);
     }
 }
