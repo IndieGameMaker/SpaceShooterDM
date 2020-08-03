@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    public float moveSpeed = 5.0f;
+    public float turnSpeed = 50.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +17,10 @@ public class PlayerCtrl : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");  //-1.0f ~ 0.0f ~ 1.0f
         float v = Input.GetAxis("Vertical");    //-1.0f ~ 0.0f ~ 1.0f
+        float r = Input.GetAxis("Mouse X");
 
-        Debug.Log("h=" + h); //Console View에 문자열을 출력
-        Debug.Log($"v={v}"); //Debug.Log("v=" + v);
+        // Debug.Log("h=" + h); //Console View에 문자열을 출력
+        // Debug.Log($"v={v}"); //Debug.Log("v=" + v);
 
         //transform.position += new Vector3(0, 0, 0.1f);
         //transform.position += Vector3.forward * 0.1f;
@@ -30,7 +34,8 @@ public class PlayerCtrl : MonoBehaviour
         */
 
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);
-        transform.Translate(dir.normalized * 0.1f);
+        transform.Translate(dir.normalized * Time.deltaTime * 0.1f);
+        transform.Rotate(Vector3.up * r * Time.deltaTime * 10.0f);
 
         // transform.Translate(Vector3.forward * 0.1f * v);
         // transform.Translate(Vector3.right * 0.1f * h);
