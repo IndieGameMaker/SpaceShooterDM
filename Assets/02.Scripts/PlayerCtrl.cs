@@ -34,8 +34,8 @@ public class PlayerCtrl : MonoBehaviour
         */
 
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);
-        transform.Translate(dir.normalized * Time.deltaTime * 0.1f);
-        transform.Rotate(Vector3.up * r * Time.deltaTime * 10.0f);
+        transform.Translate(dir.normalized * Time.deltaTime * moveSpeed);
+        transform.Rotate(Vector3.up * r * Time.deltaTime * turnSpeed);
 
         // transform.Translate(Vector3.forward * 0.1f * v);
         // transform.Translate(Vector3.right * 0.1f * h);
