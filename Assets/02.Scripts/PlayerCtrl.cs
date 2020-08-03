@@ -64,3 +64,12 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 }
+
+/*
+LOD (Level Of Detail)
+
+LOD 0 - 가장 가까울 때 표시하는 High Polygon
+LOD 1 - Middle Polygon
+LOD 2 - Low Polygon
+Culling - Hiden
+*/
