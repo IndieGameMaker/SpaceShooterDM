@@ -30,6 +30,7 @@ public class PlayerCtrl : MonoBehaviour
         */
 
         transform.Translate(Vector3.forward * 0.1f * v);
+        transform.Translate(Vector3.right * 0.1f * h);
 
     }
 }
