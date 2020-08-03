@@ -10,6 +10,7 @@ public class PlayerAnim
     public AnimationClip runBackward;
     public AnimationClip runLeft;
     public AnimationClip runRight;
+    public AnimationClip[] dies;
 }
 
 public class PlayerCtrl : MonoBehaviour
@@ -27,7 +28,7 @@ public class PlayerCtrl : MonoBehaviour
         anim = this.gameObject.GetComponent<Animation>();
 
         //Switching Idle Animation Clip
-        anim.Play("Idle");
+        anim.Play(playerAnim.idle.name);
     }
 
     // Update is called once per frame

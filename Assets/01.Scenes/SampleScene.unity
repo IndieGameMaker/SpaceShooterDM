@@ -480,6 +480,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   turnSpeed: 200
+  playerAnim:
+    idle: {fileID: 7400000, guid: df787a42d52d64ff4b908f7a344d499e, type: 2}
+    runForward: {fileID: 7400000, guid: 185c4b4f1e1c1441d920959e7dee49a5, type: 2}
+    runBackward: {fileID: 7400000, guid: 777be73b9098940d086517b3fe6beb8a, type: 2}
+    runLeft: {fileID: 7400000, guid: 268781a61383b42a98eeda538dfa52e9, type: 2}
+    runRight: {fileID: 7400000, guid: f65e8694646404294b2de66b5827d6e5, type: 2}
+    dies:
+    - {fileID: 7400000, guid: 203851ce08810499bb1840aa352bf977, type: 2}
+    - {fileID: 7400000, guid: 17e73b06fdc274f6e98fb459cdad83fd, type: 2}
+    - {fileID: 7400000, guid: 04881e9f56c0140b09e491ecaea72e9c, type: 2}
+    - {fileID: 7400000, guid: 167388e2c0dfc4756817650535e13951, type: 2}
+    - {fileID: 7400000, guid: 3d9861fce0bc745d2b009af3dc3b717b, type: 2}
 --- !u!1001 &1279971254
 PrefabInstance:
   m_ObjectHideFlags: 0
