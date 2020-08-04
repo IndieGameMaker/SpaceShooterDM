@@ -5,11 +5,17 @@ using UnityEngine;
 public class BarrelExp : MonoBehaviour
 {
     private int hitCount = 0;
+    [System.NonSerialized]
+    [HideInInspector]
     public GameObject expEffect;
+
+    public AudioClip expSfx;
+    private AudioSource _audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        _audio = this.gameObject.AddComponent<AudioSource>();
         expEffect = Resources.Load<GameObject>("BigExplosionEffect");
     }
 
@@ -27,10 +33,12 @@ public class BarrelExp : MonoBehaviour
 
     void ExpBarrel()
     {
+        _audio.PlayOneShot(expSfx);
         Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
         rb.AddForce(Vector3.up * 2000.0f);
 
         Instantiate(expEffect, transform.position, Quaternion.identity);
+        Destroy(this.gameObject, 2.0f);
 
         // Rigidbody rb = null;
         // hitCount = 0;
