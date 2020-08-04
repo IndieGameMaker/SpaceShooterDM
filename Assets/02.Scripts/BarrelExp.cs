@@ -22,6 +22,9 @@ public class BarrelExp : MonoBehaviour
         expEffect = Resources.Load<GameObject>("BigExplosionEffect");
 
         _renderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
+
+        int idx = Random.Range(0, textures.Length);
+        _renderer.material.mainTexture = textures[idx];
     }
 
     void OnCollisionEnter(Collision coll)
