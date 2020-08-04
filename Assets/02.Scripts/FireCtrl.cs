@@ -9,7 +9,7 @@ public class FireCtrl : MonoBehaviour
     public Transform firePos;
 
     [SerializeField]
-    private AudioSource audio; 
+    private new AudioSource audio; 
     public AudioClip fireSfx;
 
     void Start()

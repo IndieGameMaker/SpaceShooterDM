@@ -452,7 +452,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.09973305, y: -0.000000061812, z: 0.0000000061955885, w: 0.99501425}
+  m_LocalRotation: {x: 0.09973391, y: -0.000000043477552, z: 0.0000000043579145, w: 0.99501413}
   m_LocalPosition: {x: 0, y: 2.67, z: -4.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1177,7 +1177,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981199426}
-  m_LocalRotation: {x: 0.09973305, y: -0.000000061812, z: 0.0000000061955885, w: 0.99501425}
+  m_LocalRotation: {x: 0.09973391, y: -0.000000043477552, z: 0.0000000043579145, w: 0.99501413}
   m_LocalPosition: {x: 0, y: 2.67, z: -4.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1267,7 +1267,7 @@ MonoBehaviour:
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
-  m_CenterOnActivate: 1
+  m_CenterOnActivate: 0
 --- !u!114 &2034707436
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0.66
-  m_FrequencyGain: 0.3
+  m_FrequencyGain: 0.39
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1001 &4727521032487997191
 PrefabInstance:

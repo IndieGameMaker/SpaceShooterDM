@@ -5,6 +5,7 @@ using UnityEngine;
 public class BarrelExp : MonoBehaviour
 {
     private int hitCount = 0;
+    public GameObject expEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,17 @@ public class BarrelExp : MonoBehaviour
 
     void ExpBarrel()
     {
-        Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
-        rb.AddForce(Vector3.up * 2000.0f);
+        Rigidbody rb = null;
+        hitCount = 0;
+        if (GetComponent<Rigidbody>() == null)
+        {
+            rb = this.gameObject.AddComponent<Rigidbody>();
+            rb.AddForce(Vector3.up * 2000.0f);
+        }
+        else
+        {   
+            rb = GetComponent<Rigidbody>();
+            rb.AddForce(Vector3.up * 2000.0f);
+        }
     }
 }
