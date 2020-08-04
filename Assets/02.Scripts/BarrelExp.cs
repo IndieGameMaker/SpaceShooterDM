@@ -20,6 +20,8 @@ public class BarrelExp : MonoBehaviour
     {
         _audio = this.gameObject.AddComponent<AudioSource>();
         expEffect = Resources.Load<GameObject>("BigExplosionEffect");
+
+        _renderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
     }
 
     void OnCollisionEnter(Collision coll)
