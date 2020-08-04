@@ -10,7 +10,7 @@ public class BarrelExp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        expEffect = Resources.Load<GameObject>("BigExplosionEffect");
     }
 
     void OnCollisionEnter(Collision coll)
