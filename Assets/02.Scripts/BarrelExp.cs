@@ -27,17 +27,22 @@ public class BarrelExp : MonoBehaviour
 
     void ExpBarrel()
     {
-        Rigidbody rb = null;
-        hitCount = 0;
-        if (GetComponent<Rigidbody>() == null)
-        {
-            rb = this.gameObject.AddComponent<Rigidbody>();
-            rb.AddForce(Vector3.up * 2000.0f);
-        }
-        else
-        {   
-            rb = GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.up * 2000.0f);
-        }
+        Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
+        rb.AddForce(Vector3.up * 2000.0f);
+
+        Instantiate(expEffect, transform.position, Quaternion.identity);
+
+        // Rigidbody rb = null;
+        // hitCount = 0;
+        // if (GetComponent<Rigidbody>() == null)
+        // {
+        //     rb = this.gameObject.AddComponent<Rigidbody>();
+        //     rb.AddForce(Vector3.up * 2000.0f);
+        // }
+        // else
+        // {   
+        //     rb = GetComponent<Rigidbody>();
+        //     rb.AddForce(Vector3.up * 2000.0f);
+        // }
     }
 }
