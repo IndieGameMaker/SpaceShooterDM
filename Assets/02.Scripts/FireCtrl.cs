@@ -10,6 +10,7 @@ public class FireCtrl : MonoBehaviour
 
     [SerializeField]
     private AudioSource audio; 
+    public AudioClip fireSfx;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class FireCtrl : MonoBehaviour
         {
             //Instantiate(생성할객체, 위치, 각도)
             Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            audio.PlayOneShot(fireSfx, 0.8f);
         }        
     }
 }
