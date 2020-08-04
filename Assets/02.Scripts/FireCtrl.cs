@@ -40,8 +40,13 @@ public class FireCtrl : MonoBehaviour
 
     IEnumerator ShowMuzzleFlash()
     {
+        //불규칙한 텍스처 Offset
+        Vector2 offset = new Vector2(Random.Range(0,2), Random.Range(0,2)) * 0.5f; //0, 0.5
+        muzzleFlash.material.mainTextureOffset = offset;
+        //muzzleFlash.material.SetTextureOffset("_MainTex", offset);
+
         muzzleFlash.enabled = true;
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.25f);
         muzzleFlash.enabled = false;
     }
 }
