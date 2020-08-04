@@ -2,10 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class FireCtrl : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePos;
+
+    [SerializeField]
+    private AudioSource audio; 
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
