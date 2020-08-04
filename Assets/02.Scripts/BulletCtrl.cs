@@ -10,7 +10,7 @@ public class BulletCtrl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddRelativeForce(Vector3.forward * 1200.0f);        
+        rb.AddRelativeForce(Vector3.forward * 2500.0f);        
     }
 
 }
