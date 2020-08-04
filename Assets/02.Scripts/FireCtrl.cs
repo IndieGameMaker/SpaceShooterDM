@@ -26,7 +26,12 @@ public class FireCtrl : MonoBehaviour
         if (Input.GetMouseButtonDown(0) == true)
         {
             Fire();
-        }        
+        }   
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }     
     }
 
     void Fire()
@@ -44,6 +49,13 @@ public class FireCtrl : MonoBehaviour
         Vector2 offset = new Vector2(Random.Range(0,2), Random.Range(0,2)) * 0.5f; //0, 0.5
         muzzleFlash.material.mainTextureOffset = offset;
         //muzzleFlash.material.SetTextureOffset("_MainTex", offset);
+
+        //불규칙한 크기 조정
+        muzzleFlash.transform.localScale = Vector3.one * Random.Range(1.5f, 3.5f);
+
+        //불규칙한 회전
+        muzzleFlash.transform.localRotation = Quaternion.Euler(0, 0, Random.Range(0,360));
+
 
         muzzleFlash.enabled = true;
         yield return new WaitForSeconds(0.25f);

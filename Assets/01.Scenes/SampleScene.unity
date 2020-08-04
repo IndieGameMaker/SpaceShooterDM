@@ -1142,7 +1142,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.09973391, y: -0.000000043477552, z: 0.0000000043579145, w: 0.99501413}
+  m_LocalRotation: {x: 0.099717505, y: 0.018047193, z: -0.0018089362, w: 0.99485046}
   m_LocalPosition: {x: 0, y: 2.67, z: -4.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1356,6 +1356,7 @@ MonoBehaviour:
   firePos: {fileID: 1912533775}
   audio: {fileID: 0}
   fireSfx: {fileID: 8300000, guid: 3988c7241ff434c2a900f22726ee7a08, type: 3}
+  muzzleFlash: {fileID: 2078873678}
 --- !u!82 &1159624523
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2307,7 +2308,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981199426}
-  m_LocalRotation: {x: 0.09973391, y: -0.000000043477552, z: 0.0000000043579145, w: 0.99501413}
+  m_LocalRotation: {x: 0.099717505, y: 0.018047193, z: -0.0018089362, w: 0.99485046}
   m_LocalPosition: {x: 0, y: 2.67, z: -4.625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
