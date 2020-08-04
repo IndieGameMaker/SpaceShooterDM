@@ -12,6 +12,9 @@ public class BarrelExp : MonoBehaviour
     public AudioClip expSfx;
     private AudioSource _audio;
 
+    public Texture[] textures;
+    public MeshRenderer _renderer;
+
     // Start is called before the first frame update
     void Start()
     {
