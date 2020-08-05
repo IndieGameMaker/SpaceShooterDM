@@ -15,7 +15,8 @@ public class RemoveBullet : MonoBehaviour
             Vector3 _pos    = cp[0].point;     //충동 위치
 
             Quaternion rot = Quaternion.LookRotation(_normal);
-            Instantiate(sparkEffect, _pos, rot);
+            var effect = Instantiate(sparkEffect, _pos, rot);
+            Destroy(effect, 0.3f);
 
             Destroy(coll.gameObject);
         }
