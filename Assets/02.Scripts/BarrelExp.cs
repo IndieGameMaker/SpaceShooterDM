@@ -45,7 +45,8 @@ public class BarrelExp : MonoBehaviour
         Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
         rb.AddForce(Vector3.up * 2000.0f);
 
-        Instantiate(expEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(expEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 5.0f);
         Destroy(this.gameObject, 2.0f);
 
         // Rigidbody rb = null;
