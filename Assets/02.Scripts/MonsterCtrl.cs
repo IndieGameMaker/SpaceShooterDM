@@ -14,14 +14,20 @@ public class MonsterCtrl : MonoBehaviour
     {
         //monsterTr = this.gameObject.GetComponent<Transform>();
         monsterTr = transform;
-        playerTr  = GameObject.FindGameObjectWithTag("PLAYER").GetComponent<Transform>();
         agent     = GetComponent<NavMeshAgent>();
         anim      = GetComponent<Animator>();
+        playerTr  = GameObject.FindGameObjectWithTag("PLAYER").GetComponent<Transform>();
+        
+        // GameObject playerObj = GameObject.FindGameObjectWithTag("PLAYER");
+        // if (playerObj != null)
+        // {
+        //     playerTr = playerObj.GetComponent<Transform>();
+        // }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        agent.SetDestination(playerTr.position);
     }
 }
