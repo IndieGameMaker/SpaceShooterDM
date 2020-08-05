@@ -30,6 +30,11 @@ public class FireCtrl : MonoBehaviour
         if (Input.GetMouseButtonDown(0) == true)
         {
             Fire();
+
+            if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f))
+            {
+                Debug.Log("Hit=" + hit.collider.gameObject.name);
+            }
         }   
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -41,7 +46,7 @@ public class FireCtrl : MonoBehaviour
     void Fire()
     {
         //Instantiate(생성할객체, 위치, 각도)
-        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        //Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         audio.PlayOneShot(fireSfx, 0.8f);
 
         StartCoroutine(ShowMuzzleFlash());
