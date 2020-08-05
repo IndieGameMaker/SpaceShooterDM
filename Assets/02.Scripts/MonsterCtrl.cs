@@ -30,4 +30,19 @@ public class MonsterCtrl : MonoBehaviour
     {
         agent.SetDestination(playerTr.position);
     }
+
+    int hp = 100;
+    public void OnDamage()
+    {
+        hp -= 10;
+        if (hp <= 0)
+        {
+            MonsterDie();
+        }
+    }
+
+    public void MonsterDie()
+    {
+        anim.SetTrigger("die");
+    }
 }
