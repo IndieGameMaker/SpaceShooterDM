@@ -34,6 +34,10 @@ public class FireCtrl : MonoBehaviour
             if (Physics.Raycast(firePos.position, firePos.forward, out hit, 10.0f))
             {
                 Debug.Log("Hit=" + hit.collider.gameObject.name);
+                if (hit.collider.CompareTag("MONSTER"))
+                {
+                    hit.collider.gameObject.GetComponent<MonsterCtrl>().OnDamage();
+                }
             }
         }   
 
