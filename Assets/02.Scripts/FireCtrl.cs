@@ -19,6 +19,7 @@ public class FireCtrl : MonoBehaviour
 
     void Start()
     {
+        
         audio = GetComponent<AudioSource>();
         muzzleFlash.enabled = false;
     }
